@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">LocaleText</string>
+    <string name="action_help">ヘルプ</string>
+    <string name="description">ヌガー アダラ ケルアルガ マニサン ヤン ディブアット デンガン グラ アタウ マドゥ、カチャン パンガン（アーモンド、ケナリ、ピスタチオ、ヘーゼルナッツ、ダン カチャン マカダミア ヤン ウムム）、プティ テルル ココック、ダン カダン カダン マニサン ブア チンカン。 Ini digunakan dalam berbagai permen dan cokelat.</string>
+    <string name="nougat">パケット ペルメン ヌガー</string>
+    <string name="help_text">サポートが必要な場合は、サポート部門にお問い合わせください。</string>
+    <string name="dial_log_message">ACTION_DIAL インテントの申請を完了できませんでした。</string>
+    <string name="change_languange">言語を変えてください</string>
+    <string name="price_label2">100人分の価格:</string>
+    <string name="change_language">言語を変えてください</string>
+    <string name="price_label">100人分の価格:</string>
+    <string name="hint">単価</string>
+</resources>
