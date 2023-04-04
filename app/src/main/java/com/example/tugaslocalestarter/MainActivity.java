@@ -56,19 +56,19 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this, "Form tidak boleh kosong", Toast.LENGTH_SHORT).show();
                 }
 
-//                if(codeLanguage.equals("[en_US]")) {
-//                    String resultDollar = formatDollar((Double.parseDouble(harga)/15016)*100);
-//                    String resultsatuan = formatDollar(Double.parseDouble(harga)/15016);
-//                    label.setText(resultDollar);
-//                    label2.setText(resultsatuan);
-//                }
-//
-//                if(codeLanguage.equals("[ja_JP]")){
-//                    String resultJpn = formatJpn((Double.parseDouble(harga)/112) * 100);
-//                    String resultsatuan = formatJpn((Double.parseDouble(harga)/112));
-//                    label.setText(resultJpn);
-//                    label2.setText(resultsatuan);
-//                }
+                if(codeLanguage.equals("[en_US]")) {
+                    String resultDollar = formatDollar((Double.parseDouble(harga)/15016)*100);
+                    String resultsatuan = formatDollar(Double.parseDouble(harga)/15016);
+                    label.setText(resultDollar);
+                    label2.setText(resultsatuan);
+                }
+
+                if(codeLanguage.equals("[ja_JP]")){
+                    String resultJpn = formatJpn((Double.parseDouble(harga)/112) * 100);
+                    String resultsatuan = formatJpn((Double.parseDouble(harga)/112));
+                    label.setText(resultJpn);
+                    label2.setText(resultsatuan);
+                }
                    else{
                     String resultDollar = formatDollar((Double.parseDouble(harga)/15016)*100);
                     String resultsatuan = formatDollar(Double.parseDouble(harga)/15016);
