@@ -70,15 +70,11 @@ public class MainActivity extends AppCompatActivity {
                     label2.setText(resultsatuan);
                 }
                    else{
-                    String resultDollar = formatDollar((Double.parseDouble(harga)/15016)*100);
-                    String resultsatuan = formatDollar(Double.parseDouble(harga)/15016);
-                    label.setText(resultDollar);
-                    label2.setText(resultsatuan);
 
-//                       String resultRupiah = formatRupiah(Double.parseDouble(harga) * 100);
-//                    String resultsatuan= formatRupiah(Double.parseDouble(harga));
-//                        label.setText(resultRupiah);
-//                    label2.setText(resultsatuan);
+                       String resultRupiah = formatRupiah(Double.parseDouble(harga) * 100);
+                    String resultsatuan= formatRupiah(Double.parseDouble(harga));
+                        label.setText(resultRupiah);
+                    label2.setText(resultsatuan);
                     }
             }
         });
