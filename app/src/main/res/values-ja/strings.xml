@@ -11,4 +11,5 @@
     <string name="change_language">言語を変えてください</string>
     <string name="price_label">100人分の価格:</string>
     <string name="hint">単価</string>
+    <string name="price_pieces">単価</string>
 </resources>

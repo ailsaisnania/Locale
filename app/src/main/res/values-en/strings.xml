@@ -11,4 +11,5 @@
     <string name="change_language">Change Language</string>
     <string name="price_label">Price for 100 pax</string>
     <string name="hint">Price</string>
+    <string name="price_pieces">price per pieces</string>
 </resources>

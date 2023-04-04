@@ -11,4 +11,5 @@
     <string name="change_language">Ubah Bahasa</string>
     <string name="price_label">Harga untuk 100 pax</string>
     <string name="hint">harga satuan</string>
+    <string name="price_pieces">Harga satuan</string>
 </resources>

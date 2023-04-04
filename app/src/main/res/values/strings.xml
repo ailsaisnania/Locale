@@ -25,6 +25,7 @@
     <string name="price_label">Price for 100 pax:</string>
 
     <string name="hint"> Price </string>
+    <string name="price_pieces"> Price per pieces</string>
     <string name="change_languange">change language</string>
     <string name="price_label2">price for 100 pax</string>
     <string name="pricepax" translatable="false">1</string>

@@ -23,8 +23,10 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
     public EditText price;
+    public TextView kode;
     public Button total;
     public TextView label;
+    public TextView label2;
 
 
     @Override
@@ -32,33 +34,51 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        initComponents();
-        String Language = String.valueOf(LocaleListCompat.getAdjustedDefault());
+        kode = findViewById(R.id.code);
+        price = findViewById(R.id.price);
+        total = findViewById(R.id.total);
+        label = findViewById(R.id.label);
+        label2 = findViewById(R.id.label2);
+
+
+        String codeLanguage = String.valueOf(LocaleListCompat.getAdjustedDefault());
+        TextView code = findViewById(R.id.code);
+        code.setText(codeLanguage);
+
 
         total.setOnClickListener(new View.OnClickListener() {
             @Override
 
             public void onClick(View view) {
                 String harga = price.getText().toString();
-                double harga1 = Double.parseDouble(harga);
+
                 if (TextUtils.isEmpty(harga)){
                     Toast.makeText(MainActivity.this, "Form tidak boleh kosong", Toast.LENGTH_SHORT).show();
                 }
 
-                if (Language.equals("[en_US]")) {
-                    double prices = harga1/ 15024.60;
-                    double price100pax = prices * 100;
-                    price.setText(NumberFormat.getCurrencyInstance(Locale.US).format(price100pax));
-
-                }
-
-                else if (Language.equals("[ja_JP]")) {
-                    String resultJpn = formatJpn((Double.parseDouble(harga)/14.968) * 100);
-                    label.setText(resultJpn);
-                }
+//                if(codeLanguage.equals("[en_US]")) {
+//                    String resultDollar = formatDollar((Double.parseDouble(harga)/15016)*100);
+//                    String resultsatuan = formatDollar(Double.parseDouble(harga)/15016);
+//                    label.setText(resultDollar);
+//                    label2.setText(resultsatuan);
+//                }
+//
+//                if(codeLanguage.equals("[ja_JP]")){
+//                    String resultJpn = formatJpn((Double.parseDouble(harga)/112) * 100);
+//                    String resultsatuan = formatJpn((Double.parseDouble(harga)/112));
+//                    label.setText(resultJpn);
+//                    label2.setText(resultsatuan);
+//                }
                    else{
-                        String resultRupiah = formatRupiah(Double.parseDouble(harga) * 100);
-                        label.setText(resultRupiah);
+                    String resultDollar = formatDollar((Double.parseDouble(harga)/15016)*100);
+                    String resultsatuan = formatDollar(Double.parseDouble(harga)/15016);
+                    label.setText(resultDollar);
+                    label2.setText(resultsatuan);
+
+//                       String resultRupiah = formatRupiah(Double.parseDouble(harga) * 100);
+//                    String resultsatuan= formatRupiah(Double.parseDouble(harga));
+//                        label.setText(resultRupiah);
+//                    label2.setText(resultsatuan);
                     }
             }
         });
@@ -70,11 +90,6 @@ public class MainActivity extends AppCompatActivity {
                 showHelp();
             }
         });
-    }
-    private void initComponents(){
-        price = findViewById(R.id.price);
-        total = findViewById(R.id.total);
-        label = findViewById(R.id.label);
     }
 
     private String formatRupiah(Double number){
